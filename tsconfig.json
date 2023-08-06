@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
     "target": "es2022",
-    "module": "node16",
+    "module": "ES2020",
     "lib": ["ES2022"],
-    "moduleResolution": "node16",
+    "moduleResolution": "Bundler",
     "rootDir": ".",
     "outDir": "build",
     "allowSyntheticDefaultImports": true,
@@ -17,7 +17,11 @@
     "noUnusedParameters": true,
     "noImplicitAny": false,
     "noImplicitThis": false,
-    "strictNullChecks": false
+    "strictNullChecks": false,
+    "baseUrl": "./",
+    "paths": {
+      "@common/*": ["src/common/*"]
+    },
   },
   "include": ["src/**/*", "__tests__/**/*"]
 }
