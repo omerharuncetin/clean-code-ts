@@ -20,8 +20,8 @@
     "strictNullChecks": false,
     "baseUrl": "./",
     "paths": {
-      "@common/*": ["src/common/*"]
+      "@common/*": ["common/*"]
     },
   },
-  "include": ["src/**/*", "__tests__/**/*"]
+  "include": ["./**/*"]
 }
