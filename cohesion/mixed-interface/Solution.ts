@@ -40,6 +40,11 @@ interface UserValidator {
 }
 
 export class UserServiceImpl implements UserService, Accountable, Authable, UserValidator {
+
+  constructor(private validator: UserValidator) {
+
+  }
+
   createUser(): void {
     // ...
   }
@@ -86,11 +91,11 @@ export class UserServiceImpl implements UserService, Accountable, Authable, User
 
   validatePassword(password: string): boolean {
     // ...
-    return true;
+    return this.validator.validatePassword(password);
   }
 
   validateId(id: string): boolean {
     // ...
-    return true;
+    return this.validator.validateId(id);
   }
 }
